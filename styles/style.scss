@@ -1,0 +1,340 @@
+@import './variables';
+@import './functions';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $poppins;
+    color: $dark-grey;
+}
+
+body{
+    position: relative;
+
+}
+
+nav{
+    .logo, .items, .login, .burgerButton{
+        margin-top: -8%;
+    }
+
+    .logo{
+        position: absolute;
+        height: 32px;
+        width: 120px;
+    }
+
+    .items{
+        position: absolute;
+        right: 62%;
+        align-items: center;
+        .item{
+            list-style:none;
+            margin-right: 14%; 
+        }
+        .item:hover{
+            color: $black;
+            font-weight: bolder;
+        }
+    }
+
+    .login{
+        position: absolute;
+        right: 10%;
+        top:0;
+    }
+
+    .burgerButton{
+        position: absolute;
+        right: 0;
+        background-color: white;
+        border: none;
+        transform: translate(0,-300%);
+    }
+    .burgerButton:hover{
+        cursor: grab;
+    }
+
+    @media screen and (max-width:1200px){
+        .burgerButton{
+            transform: translate(0,0%);
+            margin-right: 5%;
+        }
+        .login, .items{
+            left: 0;
+            right: 0;
+            z-index: 10;
+            margin: 10%;
+        }
+        .items{
+            .item{
+                margin: 5% 0px;
+            }
+        }
+        .login{
+            margin-top: 55%;
+        }
+        .background{
+            position: absolute;
+            margin-top: 1%;
+            z-index: 4;
+            height: 10%;
+            width: 86%;
+            background-color: $dark-purples;
+        }
+    }
+}
+
+.main{
+    margin-top: 10%;
+    @media screen and (max-width:1200px){
+        .information{
+            margin-top: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            &__tittle{
+                font-size: 42px !important;
+                line-height: 48px !important;
+            }
+            &__p{
+                width: 327px !important;
+                // margin: 5px 0px 38px 0px;
+                // font-weight: 500;
+                font-size: 18px !important;
+                line-height: 30px !important;
+                letter-spacing: 0.12px !important;
+            }
+        }
+    }
+    .information{
+        &__tittle{
+            font-size: 80px;
+            color: $black !important;
+            line-height: 90px;
+            letter-spacing: -2px;
+        }
+        &__p{
+            width: 540px;
+            height: auto;
+            margin: 5px 0px 38px 0px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 36px;
+            letter-spacing: 0.15px;
+        }
+    }
+    &__img{
+        position: absolute;
+        right: 0;
+        margin-top: -3%;
+        width: 32%;
+    }
+    @media screen and (max-width:1200px){
+        &__img{
+            position: absolute;
+            right: 0;
+            margin-top: 3%;
+            width: 80%;
+        }
+    }
+}
+
+.inputBar{
+    @include background-image('./background_1.svg', 100%, 90%);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 52px 0px;
+    width: 80%;
+    margin: 8% 9%;
+    z-index: 1;
+    input{
+        height: 64px;
+        width: 80%;
+        margin-right: 24px;
+    }
+}
+
+.statistic{
+    justify-content: center;
+    background-color: $ligth-grey;
+    margin-top: -10%;
+    text-align: center;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+    &__tittle{
+        color: $black !important; 
+        font-size: 40px;
+    }
+    &__p{
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 18%;
+    }
+    .aquaLine{
+        background-color: $aqua;
+        margin: 0 auto;
+        height: 8px;
+        width: 55%;
+    }
+    .service{
+        position: relative;
+        z-index: 2;
+        background-color: $pure-white;
+        margin:0px 2%;
+        padding: 0px 32px 41px 32px;
+        width: 350px;
+        height: 267px;
+        &--one{
+            margin-top: -15%;
+        }
+        &--two{
+            margin-top: -10%;
+        }
+        &--three{
+            margin-top: -5%;
+        }
+        &__logo{
+            height: 88px;
+            width: 88px;
+            border-radius: 50%;
+            background-color: $dark-purples;
+            position: relative;
+            margin-top: -15%;
+        }
+        &__tittle{
+            color: $black !important;
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+    @media screen and (max-width:1200px){
+        .services{
+            margin-top: -85%;
+        }
+        .service{
+            &--one,&--two,&--three{
+                margin: 5% 0px;
+            }
+            &__logo{
+                margin: -15% auto 0px auto;
+            }
+        }
+        .aquaLine{
+            background-color: $aqua;
+            margin: 0 auto;
+            height: 700px;
+            width: 8px;
+        }
+    }
+}
+
+.getStarter{
+    @include background-image('./background_3.svg', 100%, 100%);
+    flex-direction: column;
+    padding: 57px 0px;
+    &__tittle{
+        font-size: 40px;
+        color: $pure-white;
+        margin-bottom: 32px;
+    }
+}
+
+.footer{
+    background-color: $footer-black;
+    justify-content: space-between;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+    .logo{
+        margin: -10% 25% 0px 0px;
+    }
+    .information{
+        margin-right: 70px;
+        &__tittle{
+            color: $pure-white !important;
+            font-weight: bold;
+            padding-bottom: 12px;
+        }
+        p{
+            margin-bottom: 10px;
+        }
+        p:hover{
+            color: $aqua !important;
+            cursor: gap;
+        }
+    }
+    .socialMedia{
+        i{
+            color: $pure-white !important;
+            font-size: 25px;
+            margin-right: 20%;
+        }
+        i:hover{
+            color: $aqua !important;
+            cursor: gap;
+        }
+    }
+    @media screen and (max-width:1200px){
+        .logo{
+            margin: 10% 0px 0px 0px;
+        }
+        .informations{
+            margin: 10% 0px 0px 0px;
+            .information{
+                text-align: center;
+                margin: 5% 0px 0px 0px;
+            }
+        }
+        .socialMedia{
+            flex-direction: row;
+            justify-content: center;
+            padding: 5% 0px 0px 10%;
+        }
+    }
+}
+
+// container
+.container{
+    padding: 0px 9%;
+}
+
+.flex{
+    display: flex;
+    @media screen and (max-width:1200px){
+        flex-direction: column;
+        align-items: center;
+    }
+    &__center{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// aqua button
+.button{
+    color: white;
+    background-color: $aqua;
+    border: 1px solid $aqua;
+    padding: 8px 24px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button:hover{
+    background-color: $ligth-aqua;
+    border: 1px solid $ligth-aqua;
+    cursor: grab;
+}
+
+.border__radius{
+    border-radius: 25px;
+    height: 40px;
+}
+
+.border__radius--square{
+    border-radius: 5px;
+    height: 64px;
+}
