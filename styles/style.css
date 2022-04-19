@@ -57,13 +57,16 @@ nav .burgerButton:hover {
     left: 0;
     right: 0;
     z-index: 10;
-    margin: 10%;
+    margin: 10% 0px;
   }
   nav .items .item {
-    margin: 5% 0px;
+    margin: 0px 0px 5% 0px;
   }
   nav .login {
-    margin-top: 55%;
+    margin-top: 40%;
+  }
+  nav .login .button__login {
+    margin: 5% 0px;
   }
   nav .background {
     position: absolute;
@@ -153,6 +156,23 @@ nav .burgerButton:hover {
   width: 80%;
   margin-right: 24px;
 }
+@media screen and (max-width: 1200px) {
+  .inputBar {
+    width: 80%;
+    margin: 8% auto;
+  }
+  .inputBar input {
+    line-height: 48px !important;
+    margin-right: 0px;
+  }
+  .inputBar .border__radius--square {
+    height: 48px;
+    width: 80%;
+  }
+  .inputBar input, .inputBar .border__radius--square {
+    margin: 1% 0px;
+  }
+}
 
 .statistic {
   justify-content: center;
@@ -210,19 +230,17 @@ nav .burgerButton:hover {
 }
 @media screen and (max-width: 1200px) {
   .statistic .services {
-    margin-top: -85%;
+    margin-top: 0%;
   }
   .statistic .service--one, .statistic .service--two, .statistic .service--three {
-    margin: 5% 0px;
+    margin: 10% 0px;
   }
   .statistic .service__logo {
     margin: -15% auto 0px auto;
   }
   .statistic .aquaLine {
-    background-color: #2BD0D0;
-    margin: 0 auto;
-    height: 700px;
-    width: 8px;
+    height: 0px;
+    width: 0px;
   }
 }
 
@@ -233,6 +251,7 @@ nav .burgerButton:hover {
   background-size: cover;
   width: 100%;
   height: auto;
+  text-align: center;
   flex-direction: column;
   padding: 57px 0px;
 }
@@ -246,6 +265,11 @@ nav .burgerButton:hover {
   font-size: 40px;
   color: #fff;
   margin-bottom: 32px;
+}
+@media screen and (max-width: 1200px) {
+  .getStarter__tittle {
+    font-size: 28px;
+  }
 }
 
 .footer {

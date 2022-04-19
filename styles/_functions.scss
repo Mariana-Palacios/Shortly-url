@@ -1,4 +1,4 @@
-@mixin background-image($url,$width,$maxWidth){
+@mixin background-image($url,$width,$maxWidth, $maxheight){
     background-image: url($url);
     background-repeat: no-repeat;
     background-position: center;
@@ -6,7 +6,7 @@
     width: $width;
     height: auto;
     @media screen and (max-width: 600px){
-        height: auto;
+        height: $maxheight;
         width: $maxWidth;
     }
 }
