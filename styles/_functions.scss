@@ -6,7 +6,7 @@
     width: $width;
     height: auto;
     @media screen and (max-width: 600px){
-        height: $maxheight;
+        height: 300px;
         width: $maxWidth;
     }
 }

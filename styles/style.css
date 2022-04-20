@@ -60,19 +60,19 @@ nav .burgerButton:hover {
     margin: 10% 0px;
   }
   nav .items .item {
-    margin: 0px 0px 5% 0px;
+    margin: 0px 0px 30px 0px;
   }
   nav .login {
-    margin-top: 40%;
+    margin-top: 220px;
   }
   nav .login .button__login {
-    margin: 5% 0px;
+    margin: 24px 0px;
   }
   nav .background {
     position: absolute;
     margin-top: 1%;
     z-index: 4;
-    height: 10%;
+    height: 12%;
     width: 86%;
     background-color: #3A3054;
   }
@@ -147,28 +147,46 @@ nav .burgerButton:hover {
 }
 @media screen and (max-width: 600px) {
   .inputBar {
-    height: auto;
+    height: 300px;
     width: 90%;
   }
 }
 .inputBar input {
-  height: 64px;
   width: 80%;
   margin-right: 24px;
 }
 @media screen and (max-width: 1200px) {
   .inputBar {
+    background-image: url("./background_responsive.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
     width: 80%;
     margin: 8% auto;
+    padding: 91px 0px;
   }
+}
+@media screen and (max-width: 1200px) and (max-width: 600px) {
+  .inputBar {
+    height: 300px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
   .inputBar input {
-    line-height: 48px !important;
+    line-height: 50px !important;
     margin-right: 0px;
   }
+}
+@media screen and (max-width: 1200px) {
   .inputBar .border__radius--square {
-    height: 48px;
+    height: 50px;
     width: 80%;
   }
+}
+@media screen and (max-width: 1200px) {
   .inputBar input, .inputBar .border__radius--square {
     margin: 1% 0px;
   }
@@ -199,6 +217,7 @@ nav .burgerButton:hover {
 }
 .statistic .service {
   position: relative;
+  text-align: center;
   z-index: 2;
   background-color: #fff;
   margin: 0px 2%;
@@ -224,9 +243,13 @@ nav .burgerButton:hover {
   margin-top: -15%;
 }
 .statistic .service__tittle {
+  margin-top: 5%;
   color: #34313D !important;
   font-weight: bold;
   font-size: 22px;
+}
+.statistic .service__p {
+  margin-top: 10%;
 }
 @media screen and (max-width: 1200px) {
   .statistic .services {
@@ -257,7 +280,7 @@ nav .burgerButton:hover {
 }
 @media screen and (max-width: 600px) {
   .getStarter {
-    height: auto;
+    height: 300px;
     width: 100%;
   }
 }
@@ -319,7 +342,7 @@ nav .burgerButton:hover {
   .footer .socialMedia {
     flex-direction: row;
     justify-content: center;
-    padding: 5% 0px 0px 10%;
+    margin: 5% 0px;
   }
 }
 

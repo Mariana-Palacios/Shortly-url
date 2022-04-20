@@ -69,20 +69,20 @@ nav{
         }
         .items{
             .item{
-                margin: 0px 0px 5% 0px;
+                margin: 0px 0px 30px 0px;
             }
         }
         .login{
-            margin-top: 40%;
+            margin-top: 220px;
             .button__login{
-                margin: 5% 0px;
+                margin: 24px 0px;
             }
         }
         .background{
             position: absolute;
             margin-top: 1%;
             z-index: 4;
-            height: 10%;
+            height: 12%;
             width: 86%;
             background-color: $dark-purples;
         }
@@ -155,19 +155,21 @@ nav{
     margin: 8% 9%;
     z-index: 1;
     input{
-        height: 64px;
+        // height: 64px;
         width: 80%;
         margin-right: 24px;
     }
     @media screen and (max-width:1200px){
+        @include background-image('./background_responsive.svg', 100%, 90% , auto);
         width: 80%;
         margin: 8% auto;
+        padding: 91px 0px; 
         input{
-            line-height: 48px !important;
+            line-height: 50px !important;
             margin-right: 0px;
         }
         .border__radius--square{
-            height: 48px;
+            height: 50px;
             width: 80%;
         }
         input, .border__radius--square{
@@ -200,9 +202,10 @@ nav{
     }
     .service{
         position: relative;
+        text-align: center;
         z-index: 2;
         background-color: $pure-white;
-        margin:0px 2%;
+        margin: 0px 2%;
         padding: 0px 32px 41px 32px;
         width: 350px;
         height: 267px;
@@ -224,9 +227,13 @@ nav{
             margin-top: -15%;
         }
         &__tittle{
+            margin-top: 5%;
             color: $black !important;
             font-weight: bold;
             font-size: 22px;
+        }
+        &__p{
+            margin-top: 10%;
         }
     }
     @media screen and (max-width:1200px){
@@ -313,7 +320,7 @@ nav{
         .socialMedia{
             flex-direction: row;
             justify-content: center;
-            padding: 5% 0px 0px 10%;
+            margin: 5% 0px; 
         }
     }
 }
